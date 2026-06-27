@@ -15,6 +15,8 @@ final class HealthServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        //
+        $this->app->booted(function (): void {
+            $this->app->make(ModuleHealthChecks::class)->registerWithSpatie();
+        });
     }
 }
