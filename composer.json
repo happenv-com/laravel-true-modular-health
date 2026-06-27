@@ -1,0 +1,41 @@
+{
+    "name": "happenv-com/laravel-true-modular-health",
+    "description": "Module-scoped health checks for laravel-true-modular: declare checks per module, aggregate runtime + architecture health via Spatie Laravel Health and module:doctor.",
+    "license": "MIT",
+    "type": "library",
+    "keywords": ["laravel", "modular-monolith", "health", "spatie-health"],
+    "authors": [
+        { "name": "webard", "email": "code@webard.me" }
+    ],
+    "repositories": [
+        { "type": "path", "url": "../laravel-true-modular", "options": { "symlink": true } }
+    ],
+    "require": {
+        "php": "^8.3",
+        "happenv-com/laravel-true-modular": "@dev",
+        "spatie/laravel-health": "^1.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.29",
+        "larastan/larastan": "^3.10",
+        "orchestra/testbench": "^11.1",
+        "pestphp/pest": "^4.0"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": { "Happenv\\LaravelTrueModular\\Health\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Happenv\\LaravelTrueModular\\Health\\Tests\\": "tests/" }
+    },
+    "config": {
+        "allow-plugins": { "pestphp/pest-plugin": true }
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["Happenv\\LaravelTrueModular\\Health\\HealthServiceProvider"]
+        }
+    },
+    "$schema": "https://getcomposer.org/schema.json"
+}
