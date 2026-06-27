@@ -20,7 +20,7 @@ function bindAcyclicRegistry(): void
 {
     app()->singleton(
         ModuleRegistry::class,
-        static fn (): ModuleRegistry => new ModuleRegistry(__DIR__.'/../fixtures/acyclic/app-modules'),
+        static fn (): ModuleRegistry => new ModuleRegistry(__DIR__.'/../Fixtures/acyclic/app-modules'),
     );
 }
 
