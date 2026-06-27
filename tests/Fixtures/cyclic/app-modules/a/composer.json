@@ -1,0 +1,1 @@
+{ "name": "myapp/a", "type": "true-module", "require": { "myapp/b": "*" } }

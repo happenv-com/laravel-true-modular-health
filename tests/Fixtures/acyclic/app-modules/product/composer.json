@@ -1,0 +1,1 @@
+{ "name": "myapp/product", "type": "true-module", "require": { "myapp/core": "*" } }
