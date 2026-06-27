@@ -15,7 +15,7 @@ function bindRegistry(string $appModulesPath): void
 }
 
 it('passes for an acyclic module graph', function (): void {
-    bindRegistry(__DIR__.'/../fixtures/acyclic/app-modules');
+    bindRegistry(__DIR__.'/../Fixtures/acyclic/app-modules');
 
     $result = CycleCheck::new()->run();
 
@@ -23,7 +23,7 @@ it('passes for an acyclic module graph', function (): void {
 });
 
 it('fails and names the cycle for a cyclic module graph', function (): void {
-    bindRegistry(__DIR__.'/../fixtures/cyclic/app-modules');
+    bindRegistry(__DIR__.'/../Fixtures/cyclic/app-modules');
 
     $result = CycleCheck::new()->run();
 
