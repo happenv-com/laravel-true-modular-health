@@ -7,12 +7,9 @@
     "authors": [
         { "name": "webard", "email": "code@webard.me" }
     ],
-    "repositories": [
-        { "type": "path", "url": "../laravel-true-modular", "options": { "symlink": true } }
-    ],
     "require": {
         "php": "^8.3",
-        "happenv-com/laravel-true-modular": "@dev",
+        "happenv-com/laravel-true-modular": "^1.0",
         "spatie/laravel-health": "^1.0"
     },
     "require-dev": {
