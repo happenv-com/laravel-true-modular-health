@@ -150,9 +150,11 @@ use Illuminate\Support\Facades\Artisan;
 $checks = app(ModuleHealthChecks::class)->collect();   // array<shortName, list<Check>>
 expect($checks['inventory'])->toHaveCount(2);
 
-Artisan::call('module:doctor', ['--module' => 'inventory', '--json' => true]);
+$exitCode = Artisan::call('module:doctor', ['--module' => 'inventory', '--json' => true]);
 $report = json_decode(Artisan::output(), true);
-expect($report['summary']['failed'])->toBe(0);
+expect($exitCode)->toBe(0)                       // non-zero on failed AND crashed
+    ->and($report['summary']['crashed'])->toBe(0)
+    ->and($report['summary']['failed'])->toBe(0);
 ```
 
 ## Do not
