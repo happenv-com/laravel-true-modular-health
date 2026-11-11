@@ -75,6 +75,10 @@ output carries a stable envelope:
 graph contains a circular dependency. It reuses the core's own topological sort, so it sees the same
 edges the framework uses to order providers.
 
+## AI assistants (Laravel Boost)
+
+The package ships a [Laravel Boost](https://laravel.com/docs/boost) skill, `true-modular-health-development`, in `resources/boost/skills/`. `php artisan boost:install` (or `boost:update`) offers it to your coding agent: how to write and declare a module's checks, run `module:doctor` as a gate, and the naming and boot-time pitfalls.
+
 ## License
 
 MIT.
